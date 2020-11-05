@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - Inputs</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <form method="GET" action="/search-articles">
+                <input name="search" id="input-search-article" aria-label="Search article" type="search" placeholder="Search article...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+    
+    <main class="container">
+        <form method="POST" action="/upload-article">
+            <fieldset>
+                <legend>Upload an article to the system</legend>
+                <div class="input-wrapper">
+                    <label for="in-headline">Headline</label>
+                    <input type="text" id="in-headline" name="headline" placeholder="" minlength="15" maxlength="30" required>
+                </div>
+                <div class="input-wrapper">
+                    <label for="in-headline-2">Headline 2</label>
+                    <input type="text" id="in-headline-2" name="headline-2" placeholder="" minlength="15" maxlength="50">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="in-text">Article Text</label>
+                    <textarea id="in-text" name="text" minlength="40" maxlength="300" required cols="50" rows="10"></textarea>
+                </div>
+                <div class="input-wrapper">
+                    <label for="in-files">Upload pictures</label>
+                    <input id="in-files" name="files" type="file" multiple accept="image/png">
+                </div>
+                <div>
+                    <label for="in-password">Password</label>
+                    <input 
+                    id="in-password" 
+                    name="password"
+                    title="Must contain at least one  number and one uppercase and lowercase letter, and at least 5 or more characters"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" 
+                    type="password" required>
+                </div>
+                <div class="input-wrapper">
+                    <button type="submit">Upload article</button>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+
+</body>
+</html>

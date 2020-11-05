@@ -1,0 +1,56 @@
+/* ------------------------------------------------------------ */
+
+.container {
+    max-width: 1060px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* ------------------------------------------------------------ */
+/* Header */
+
+header {
+    border-bottom: solid 1px grey;
+    padding: 20px 0;
+}
+
+header > .container > form {
+    text-align: center;
+}
+
+/* input[type="search"]::placeholder {
+    color: lightslategrey;
+} */
+
+/* header input::placeholder {
+    color: lightslategrey;
+} */
+
+#input-search-article::placeholder {
+    color: lightslategrey;
+}
+
+/* ------------------------------------------------------------ */
+/* Main */
+
+main {
+    padding-top: 12px;
+}
+
+main > form {
+    margin-top: 22px;
+}
+
+.input-wrapper {
+    padding: 8px 0;
+    /* margin: 14px 0; */
+}
+
+input:invalid, textarea:invalid {
+    background: indianred;
+}
+
+input:focus, textarea:focus {
+    border: solid 3px black;
+}
